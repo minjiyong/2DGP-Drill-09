@@ -99,7 +99,7 @@ class Run:
 class Boy:
 
     def __init__(self):
-        self.x, self.y = 400, 90
+        self.x, self.y = 400, 70
         self.face_dir = 1
         self.image = load_image('animation_sheet.png')
         self.state_machine = StateMachine(self)
@@ -125,4 +125,4 @@ class Boy:
 
     def fire_ball(self):
         ball = Ball(self.x, self.y, self.face_dir * 10)
-        game_world.add_object(ball)
+        game_world.add_object(ball, 0)
